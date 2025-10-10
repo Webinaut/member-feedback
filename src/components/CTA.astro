@@ -1,0 +1,97 @@
+---
+
+---
+
+<div class="cta-wrap">
+  <div class="cta">
+    <h1>Members' Real Needs</h1>
+    <h4>Actionable Insights</h4>
+    <a href="/contact/" role="button"
+      ><div class="btn-text">Get In Touch ↬</div></a
+    >
+  </div>
+</div>
+<style lang="scss">
+  .cta-wrap {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .cta {
+    position: sticky;
+    > h1 {
+      position: sticky;
+      margin-top: 0;
+      background: linear-gradient(
+        to top,
+        var(--pico-primary-hover),
+        var(--pico-primary-focus)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin-bottom: 0;
+      /* Text Emboss */
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0.001em 0.05em 0.01em #0004;
+      -webkit-text-stroke: 0.01em #00000015;
+      filter: brightness(120%);
+    }
+    > h4 {
+      position: sticky;
+      font-size: 2.2rem;
+      font-weight: 600;
+      background: var(--pico-primary-inverse);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      /* Text Emboss */
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0.001em 0.05em 0.01em #0004;
+      -webkit-text-stroke: 0.01em #00000015;
+      filter: brightness(120%);
+    }
+  }
+  a[role="button"] {
+    background-image: linear-gradient(
+      var(--pico-primary-hover-background),
+      var(--pico-primary)
+    );
+    box-shadow:
+      0.3px 0.5px 0.7px hsl(0deg 0% 0% / 0.1),
+      1.5px 2.9px 3.7px -0.4px hsl(0deg 0% 0% / 0.1),
+      2.7px 5.4px 6.8px -0.7px hsl(0deg 0% 0% / 0.1),
+      4.5px 8.9px 11.2px -1.1px hsl(0deg 0% 0% / 0.1),
+      7.1px 14.3px 18px -1.4px hsl(0deg 0% 0% / 0.1),
+      11.2px 22.3px 28.1px -1.8px hsl(0deg 0% 0% / 0.1),
+      17px 33.9px 42.7px -2.1px hsl(0deg 0% 0% / 0.1),
+      25px 50px 62.9px -2.5px hsl(0deg 0% 0% / 0.1);
+    transition: 0.25s ease;
+    padding: 0.6em 1.2em;
+    margin: 0 1em;
+  }
+
+  a[role="button"]:hover {
+    background-image: linear-gradient(
+      var(--pico-primary),
+      var(--pico-primary-hover-background)
+    );
+    > .btn-text {
+      background: #000000;
+      background-clip: text;
+      font-weight: 800;
+    }
+  }
+
+  .btn-text {
+    background: var(--pico-primary-inverse);
+    background-clip: text;
+    font-weight: 600;
+    color: transparent;
+    text-shadow: 0.001em 0.05em 0.01em #0000;
+    -webkit-text-stroke: 0.01em #00000015;
+    filter: brightness(160%);
+  }
+</style>

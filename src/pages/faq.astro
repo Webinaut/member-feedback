@@ -1,0 +1,147 @@
+---
+import Layout from "../layouts/Layout.astro";
+const title = "Frequently Asked Questions";
+---
+
+<Layout title={title}>
+  <div class="container">
+    <h1>{title}</h1>
+    <article>
+      <p>Here are some common questions managers ask about Member Feedback:</p>
+      <details name="faq">
+        <summary role="button"
+          >Why should we conduct a member feedback survey?</summary
+        >
+        <p>
+          Surveys provide honest, quantifiable data on member satisfaction,
+          engagement, and perceived value. They highlight areas for improvement,
+          such as facilities, events or communication. They show members that
+          their opinion is valued.
+        </p>
+      </details>
+      <details name="faq">
+        <summary role="button">How much does it cost?</summary>
+        <p>
+          The cost of a member feedback survey depends on the size of your
+          member base and the type of survey you choose. We will provide you
+          with a quote based on your needs. Surveys consisting of core questions
+          and shorter questionnaires can be completed at a lower cost.
+          Specialised techniques, like Choice-based Conjoint Analysis, whilst
+          delivering valuable insights, cost a bit more.
+        </p>
+      </details>
+      <details name="faq">
+        <summary role="button"
+          >What are the most important topics to cover in the survey?</summary
+        >
+        <p>
+          Focus on the member experience and issues that affect member
+          retention, such as:
+          <ul>
+            <li>Facilities</li>
+            <li>Staff/service quality</li>
+            <li>Events</li>
+            <li>Communication</li>
+            <li>Engagement</li>
+            <li>Value</li>
+          </ul>
+        </p>
+      </details>
+      <details name="faq">
+        <summary role="button">What geographic areas do you service?</summary>
+        <p>
+          Any area within Australia. Other countries can also be serviced.
+          However, there may be challenges relating to timezones and currency.
+        </p>
+      </details>
+      <details name="faq">
+        <summary role="button"
+          >How long should the survey be to maximize participation?</summary
+        >
+        <p>
+          Keep it as short as possible. Ideally, a survey should take no more
+          than 5 to 10 minutes to complete. Long surveys lead to lower response
+          rates and less thoughtful answers.
+        </p>
+      </details>
+      <details name="faq">
+        <summary role="button"
+          >What should members do if they encounter a technical issue while
+          taking the survey?</summary
+        >
+        <p>They will be given a link to a contact form for support.</p>
+      </details>
+      <details name="faq">
+        <summary role="button"
+          >How do you ensure that members' privacy is protected?</summary
+        >
+        <p>
+          The only details that members need to provide are a name or email
+          address and a unique code or number, like a membership number. This
+          enables them to login to the survey and complete it once only. These
+          identifiers are held in a secure online database (Google Firebase) and
+          protected by authentication credentials. Nothing is ever revealed to
+          anyone else.
+        </p>
+      </details>
+      <details name="faq">
+        <summary role="button"
+          >How long does it take before I receive the results?</summary
+        >
+        <p>
+          It normally takes around two weeks to discuss and finalise the
+          questionnaire and prepare the member list for the survey. Then, we
+          recommend a fieldwork period of two weeks and results will then be
+          available within 2 weeks.
+        </p>
+      </details>
+
+      <details name="faq">
+        <summary role="button"
+          >What do I get out of a member feedback survey?</summary
+        >
+        <p>
+          A report containing an Executive Summary, a detailed analysis of the
+          results, and a list of conclusions and recommendations. Once the
+          report has been circulated and perused, a Zoom meeting will be
+          scheduled to discuss the findings.
+        </p>
+        <p>
+          This can be followed up with an Zoom meeting with members to present
+          the findings to them. This will be quoted separately if required.
+        </p>
+      </details>
+    </article>
+  </div>
+</Layout>
+<style lang="scss">
+  [role="button"] {
+    margin-bottom: 1em;
+  }
+  [role="button"].outline {
+    // background-color: var(--pico-primary);
+    // --pico-color: var(--pico-color);
+    // color: var(--pico-color);
+  }
+  [role="button"]:hover {
+    box-shadow: none;
+
+    border-color: var(--pico-text-selection-color);
+    background-color: var(--pico-text-selection-color);
+    // --pico-color: var(--pico-color);
+    // color: var(--pico-color);
+  }
+  [role="button"]:focus {
+    box-shadow: none;
+    border-color: var(--pico-primary-hover);
+    background-color: var(--pico-primary-hover);
+    // --pico-color: var(--pico-color);
+    // color: var(--pico-color);
+  }
+  h1 {
+    text-align: center;
+  }
+  article {
+    padding-top: 1em;
+  }
+</style>

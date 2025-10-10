@@ -1,11 +1,54 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/FPLayout.astro";
+import Benefits from "../components/Benefits.astro";
+import Features from "../components/Features.astro";
+// const pageTitle = "Home Page";
 ---
 
 <Layout>
-	<Welcome />
+  <!-- <h1>{pageTitle}</h1> -->
+  <div class="main">
+    <article>
+      <p>
+        Member-based organisations, such as clubs, associations, and societies,
+        owe their very existence to the commitment and satisfaction of their
+        members. To remain relevant, thrive and grow, they need to constantly
+        assess and adapt to their members' needs.
+      </p>
+      <p>
+        The only objective way to do so is via member feedback surveys. Without
+        them, leadership is often operating in the dark, relying on anecdotal
+        evidence or the vocal minority, which can lead to biased decision-making
+        and, ultimately, member churn.
+      </p>
+      <p>
+        This is why Member Feedback was established – combining our web
+        developer skills with our marketing and social research skills to offer
+        a one stop solution to the need for member feedback surveys.
+      </p>
+      <p>
+        One of the most important elements of a member feedback survey is
+        measuring member satisfaction and engagement. Low satisfaction scores
+        are early warning signs. Seemingly minor issues tend to snowball into
+        widespread disillusionment and lapsed memberships.
+      </p>
+      <p>
+        Also, a well-designed survey can clearly prioritise where members want
+        to see investment. Do they value new sports facilities more than a
+        renovated clubhouse? Are they interested in more coaching or more social
+        events? This evidence-based approach builds trust and confidence in the
+        leadership.
+      </p>
+      <p>
+        Surveys also foster a sense of ownership and community. When you
+        actively solicit input, it shows that members' voices are valued. The
+        survey process transforms members from passive recipients of services
+        into active stakeholders in the club's future. When members see their
+        suggestions being implemented, their sense of belonging and loyalty
+        deepens.
+      </p>
+    </article>
+  </div>
+  <Benefits />
+  <Features />
 </Layout>

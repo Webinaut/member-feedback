@@ -1,0 +1,69 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import msImage from "../images/MartinSlack001-scaled.jpg";
+const pageTitle = "About Member Feedback";
+---
+
+<Layout pageTitle={pageTitle}>
+  <article>
+    <div class="ms-history">
+      <Image src={msImage} alt="Martin Slack" />
+      <p>
+        Many of you know me as Martin, the trained front-end web developer. I
+        have been building websites using Wordpress or Astro for more than ten
+        years. Many of these websites have been for clubs or organisations with
+        members, such as golf clubs, producer associations or churches. You can
+        see many examples in <a
+          href="https://onestopsites.net.au/portfolio/"
+          target="_blank"><b>my portfolio</b></a
+        >.
+      </p>
+      <p>
+        What most of my website clients may not know is that, prior to my web
+        developer career, I was a marketing and social researcher with a
+        university education in economics and statistics.
+      </p>
+      <p>
+        It occurred to me that there was an opportunity to combine these two
+        sets of skills to offer an online feedback service.
+      </p>
+      <p>
+        Most online surveys I come across are superficial, poorly designed and
+        based on self-selecting respondents. This is often because the authors
+        of these surveys are developers, untrained in questionnaire or sample
+        design.
+      </p>
+      <p>
+        Member-based organisations are ideal for feedback surveys because they
+        have a finite list of members. This provides a concrete sampling frame
+        from which either a sample can be randomly chosen or a census conducted.
+      </p>
+      <p>
+        You can see more detail about how member feedback surveys are conducted
+        on the <a href="../how-it-works/" target="_blank"
+          ><b>“How It Works” page</b></a
+        >.
+      </p>
+    </div>
+  </article>
+</Layout>
+<style lang="scss">
+  h1 {
+    text-align: center;
+  }
+  .ms-history {
+    display: flow-root;
+  }
+  img {
+    max-width: 30%;
+    float: right;
+    margin-left: 15px;
+    $shadow-color: #f4f4f4;
+    box-shadow:
+      0 0 3px 3px $shadow-color,
+      0 0 3.6px -0.8px $shadow-color,
+      0 0 9px -1.7px $shadow-color,
+      0 0 21.9px -2.5px $shadow-color;
+  }
+</style>

@@ -1,0 +1,40 @@
+---
+// import logo from "../images/MS-Logo.png?url";
+import fphero from "../images/crowd.jpg";
+import Logo from "./Logo.astro";
+import CTA from "./CTA.astro";
+import Navigation from "./Navigation.astro";
+import Hamburger from "./Hamburger.astro";
+---
+
+<div class="container-fluid fp-header">
+  <div class="top-header">
+    <Logo />
+    <Hamburger />
+    <Navigation />
+  </div>
+  <CTA />
+</div>
+<div class="container"></div>
+<style define:vars={{ fphero: `url(${fphero.src})` }}>
+  .fp-header {
+    padding-top: 0.2em;
+    position: relative;
+    flex-flow: row wrap;
+    height: 500px;
+    background: var(--fphero) center/cover no-repeat;
+    border-image: fill 0
+      linear-gradient(
+        rgb(from var(--pico-color) r g b / 0.95),
+        rgb(from var(--pico-primary-background) r g b / 0.3)
+      ); /*your gradient here - top to bottom*/
+    align-items: flex-start;
+  }
+  .top-header {
+    max-height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>

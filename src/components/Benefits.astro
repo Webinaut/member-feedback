@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets";
+import grow from "../images/grow.svg";
+import whatmatters from "../images/what-matters.svg";
+import trust from "../images/trust.svg";
+---
+
+<h2 style="text-align:center">Key Benefits</h2>
+<div class="container grid">
+  <article class="benefits">
+    <Image src={whatmatters} alt="What matters" />
+
+    <h3>What Matters</h3>
+    <p>Find out what really matters to your members</p>
+  </article>
+  <article class="benefits">
+    <Image src={trust} alt="Member trust and confidence" />
+
+    <h3>Member Trust</h3>
+    <p>Raise member trust and confidence in your organisation or club</p>
+  </article>
+  <article class="benefits">
+    <Image src={grow} alt="Grow membershipWhat matters" />
+
+    <h3>Grow Membership</h3>
+    <p>Enhance your culture and grow membership</p>
+  </article>
+</div>
+
+<style lang="scss">
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  .benefits {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    text-align: center;
+    margin-bottom: 1em;
+    box-shadow: none;
+    > p {
+      text-align: center;
+    }
+  }
+  h2 {
+    margin-bottom: 0;
+  }
+  img {
+    width: 30%;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 768px) {
+    .grid {
+      display: block;
+    }
+  }
+</style>

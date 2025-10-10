@@ -1,0 +1,120 @@
+---
+import { Image } from "astro:assets";
+import who from "../images/who.svg";
+import what from "../images/what.svg";
+import why from "../images/why.svg";
+import where from "../images/where.svg";
+import when from "../images/when.svg";
+import how from "../images/how.svg";
+---
+
+<h2 style="text-align:center">Your Questions Answered</h2>
+<div class="container grid">
+  <article class="features">
+    <Image src={who} alt="Who is this for?" />
+
+    <h3><span class="hlight">Who</span> Is This For?</h3>
+    <p>
+      Any organisation with members looking to improve the member experience.
+      This includes sports clubs, social clubs, community groups, and more.
+    </p>
+
+    <a href="/how-it-works/" role="button" class="outline">Read More</a>
+  </article>
+
+  <article class="features">
+    <Image src={why} alt="Why is feedback so important?" />
+
+    <h3><span class="hlight">Why</span> Is Feedback So Important?</h3>
+    <p>
+      Organisations and clubs thrive when their members have trust and
+      confidence in their leadership. Feedback is the starting point for
+      building this trust and confidence.
+    </p>
+
+    <a href="/how-it-works/" role="button" class="outline">Read More</a>
+  </article>
+  <article class="features">
+    <Image src={when} alt="When is the right time for feedback?" />
+
+    <h3><span class="hlight">When</span> is the right time for feedback?</h3>
+    <p>
+      Early and regularly. If you are a leader of a sports club or social group,
+      regular, candid communication is key.
+    </p>
+
+    <a href="/how-it-works/" role="button" class="outline">Read More</a>
+  </article>
+
+  <article class="features">
+    <Image src={where} alt="WWhere is the survey carried out?" />
+
+    <h3><span class="hlight">Where</span> is the survey carried out?</h3>
+    <p>
+      Online. Members just need an email address to participate in the survey.
+    </p>
+
+    <a href="/how-it-works/" role="button" class="outline">Read More</a>
+  </article>
+  <article class="features">
+    <Image src={what} alt="What Do I Need To Provide?" />
+
+    <h3><span class="hlight">What</span> Do I Need To Provide?</h3>
+    <p>
+      Not much. Just a few details about your organisation and your members. We
+      will follow up with you.
+    </p>
+
+    <a href="/how-it-works/" role="button" class="outline">Read More</a>
+  </article>
+  <article class="features">
+    <Image src={how} alt="How is it conducted?" />
+
+    <h3><span class="hlight">How</span> is it conducted?</h3>
+    <p>
+      By emailing members and asking them to complete an online survey. Each
+      member receives a link to the survey and can complete it once only.
+    </p>
+
+    <a href="/how-it-works/" role="button" class="outline">Read More</a>
+  </article>
+</div>
+
+<style lang="scss">
+  .hlight {
+    color: var(--pico-text-selection-color);
+    font-weight: bold;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  .features {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+    text-align: center;
+    margin-bottom: 1em;
+    > p {
+      text-align: left;
+    }
+    > img {
+      margin: 0 auto;
+    }
+  }
+  button a {
+    text-decoration: none;
+  }
+
+  img {
+    width: 30%;
+  }
+  @media screen and (max-width: 768px) {
+    .grid {
+      display: block;
+    }
+  }
+</style>

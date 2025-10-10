@@ -1,0 +1,33 @@
+---
+const year = new Date();
+---
+
+<div class="container-fluid">
+  <footer>
+    Site By: <a href="https://onestopsites.net.au">One Stop Sites</a> &copy; Member
+    Feedback &middot; 2025 - <span id="footer-year">{year.getFullYear()}</span>
+  </footer>
+</div>
+<style>
+  .container-fluid {
+    height: 70px;
+    background-color: var(--pico-primary-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer {
+    color: var(--pico-primary-inverse);
+    /* Centers the text content */
+    text-align: center;
+    /* Makes the font smaller */
+    font-size: 0.9rem;
+    & a {
+      color: var(--pico-primary);
+    }
+    & a:hover {
+      color: var(--pico-primary-hover);
+    }
+  }
+</style>

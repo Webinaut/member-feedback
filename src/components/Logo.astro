@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import logo from "../images/Wordmark-Reversed-Rectangular.png";
+---
+
+<div class="logo"><a href="/"><Image src={logo} alt="Logo" /></a></div>
+<style lang="scss">
+  .logo img {
+    max-height: 80px;
+    object-fit: contain;
+    max-width: max-content;
+    padding: 0;
+  }
+  @media only screen and (max-width: 768px) {
+    .logo {
+      display: flex;
+      justify-content: flex-start;
+      & img {
+        max-width: 140px;
+      }
+    }
+  }
+</style>

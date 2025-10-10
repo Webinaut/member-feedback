@@ -1,0 +1,154 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import Design from "../images/Design.svg";
+import exampleReport from "../images/Example Report.png";
+import surveyForm from "../images/Woop-Woop-Country-Club-Survey-Form.png";
+const pageTitle = "How It Works";
+---
+
+<Layout>
+  <div class="main">
+    <h1>{pageTitle}</h1>
+    <p>
+      Essentially, there are three elements in a feedback survey – Briefing and
+      Design, Survey Methodology and Deliverables.
+    </p>
+    <article>
+      <h2>Briefing and Design</h2>
+      <div class="grid design">
+        <div class="hw-1">
+          <Image src={Design} alt="Design" />
+        </div>
+        <div class="hw-2">
+          <p>
+            There is an old saying in research – “Garbage in, garbage out”. This
+            is why it is so important to be clear about how the information is
+            to be used when briefing Member Feedback.
+          </p>
+          <p>
+            Based on this briefing, we will provide a formal survey proposal,
+            stating our interpretation of the brief and how we propose to meet
+            it.
+          </p>
+          It will include:
+          <ul>
+            <li>Survey Objectives</li>
+            <li>Questionnaire Design</li>
+            <li>Fieldwork Methodology</li>
+            <li>Analysis and Reporting</li>
+            <li>Cost and Timing</li>
+            <li>Requirements From Client</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>Methodology</h2>
+      <div class="grid method">
+        <div class="hw-2">
+          <h3>Questionnaire</h3>
+          <p>
+            The questionnaire will be designed as a document for approval by
+            client. It will consist of Core Modules (such as Member Experience,
+            Engagement and Value), one open-ended question and respondent
+            information for the analysis.
+          </p>
+          <p>
+            Depending on the Design, there may also be Added Value modules, such
+            as Conjoint trade-off, competitive image or concept testing
+            questions.
+          </p>
+          <p>It will then be converted to an online form.</p>
+          <h3>Sampling</h3>
+          <p>
+            The organisation needs to provide a document (such as a spreadsheet)
+            containing the names (or email addresses) and membership numbers
+            (such as Golf ID) or another unique ID associated with the
+            individual member.
+          </p>
+          <p>
+            This will be uploaded to a secure online database (Google Firebase),
+            which will be used to validate respondents and monitor whether they
+            have already completed the survey.
+          </p>
+          <h3>Fieldwork</h3>
+          <p>
+            Members will be sent a link to login to the survey form with an
+            explanatory message. The app behind the login form checks
+            credentials against the database and marks the response as complete
+            once the form is submitted.
+          </p>
+          <p>
+            Members who try to complete the form a second time will receive a
+            message.
+          </p>
+        </div>
+        <div class="hw-1">
+          <Image src={surveyForm} alt="Survey Form" />
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>Deliverables</h2>
+      <div class="grid deliver">
+        <div class="hw-1">
+          <Image src={exampleReport} alt="Example Report" />
+        </div>
+        <div class="hw-2">
+          <p>
+            The data analysis will include summary graphics as well as
+            appropriate breakdowns. Added Value modules will be reported
+            separately with an explanation of their interpretation.
+          </p>
+          <p>
+            A written report will be provided with answers to the questions
+            posed in the Briefing and Design phase. It will include our
+            Conclusions and Recommendations for Action.
+          </p>
+          <p>
+            Once the report has been circulated and perused, a follow-up Zoom
+            call will be scheduled to go through the report and discuss its
+            contents, interpretation and implications.
+          </p>
+          <p>
+            If required, an additional Zoom call may be scheduled with
+            interested members.
+          </p>
+        </div>
+      </div>
+    </article>
+  </div>
+  <style lang="scss">
+    h1,
+    h2 {
+      text-align: center;
+    }
+    article {
+      padding-top: 1em;
+    }
+    .grid.design,
+    .grid.deliver {
+      display: grid;
+      grid-template-columns: 40% 60%;
+    }
+    .grid.method {
+      display: grid;
+      grid-template-columns: 60% 40%;
+    }
+    @media only screen and (max-width: 768px) {
+      .grid.deliver,
+      .grid.design,
+      .grid.method {
+        display: flex;
+        flex-direction: column;
+      }
+      .hw-1 {
+        order: 1;
+      }
+      .hw-2 {
+        order: 2;
+      }
+    }
+  </style>
+</Layout>

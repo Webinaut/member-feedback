@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "member-feedback",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,6 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.13.7"
+    "@picocss/pico": "^2.1.1",
+    "astro": "^5.13.7",
+    "sass": "^1.92.1"
   }
 }
