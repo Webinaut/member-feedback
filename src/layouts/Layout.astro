@@ -2,18 +2,12 @@
 import "../styles/global.scss";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-const { pageTitle } = Astro.props;
+import Head from "../components/Head.astro";
+const { pageTitle, description } = Astro.props;
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/MFFavicon.png" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <title>{pageTitle}</title>
-  </head>
+  <Head title={pageTitle} description={description} />
 
   <body>
     <Header />
